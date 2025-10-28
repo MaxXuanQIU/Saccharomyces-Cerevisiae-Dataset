@@ -13,30 +13,28 @@ The processing scripts build a consistent subset of proteins with both network c
 ## Repository layout
 
 ```
-data/
-	original_data/
-		idmapping_2025_10_27.fasta        # UniProt FASTA for S. cerevisiae
-		sgd.gaf                            # GO annotations from SGD (GAF format)
-		protein_network_data.txt           # STRING network edges
-		unique_STRING_proteins.txt         # Unique STRING protein IDs (#string_protein_id)
-		list_of_STRING_proteins.txt        # Supplemental list (optional)
-	processed_data/                      # Outputs are written here
-
-src/
-	common.py                            # Paths, helpers, ESM loader
-	data_processor.py                    # Cleans/merges network + GO; builds labels
-	esm_feature_extractor.py             # Extracts ESM-2 embeddings and re-aligns dataset
-	data_inspection.py                   # Prints shapes/stats of the processed pickle
-
-scripts/
-	run_pipeline.ps1                     # Run preprocess → ESM extract → inspection (Windows PowerShell)
-	preprocess.ps1                       # Only preprocessing
-	extract_esm.ps1                      # Only ESM feature extraction
-	inspect.ps1                          # Only dataset inspection
-
-requirements.txt                       # Core deps (install PyTorch separately)
-LICENSE                                # Apache-2.0
-README.md
+Saccharomyces-Cerevisiae-Dataset/
+├── data/
+│   ├── original_data/
+│   │   ├── idmapping_2025_10_27.fasta         # UniProt FASTA for S. cerevisiae
+│   │   ├── sgd.gaf                            # GO annotations from SGD (GAF format)
+│   │   ├── protein_network_data.txt           # STRING network edges
+│   │   ├── unique_STRING_proteins.txt         # Unique STRING protein IDs
+│   │   └── list_of_STRING_proteins.txt        # Supplemental list (optional)
+│   └── processed_data/                        # Outputs are written here
+├── src/
+│   ├── common.py                              # Paths, helpers, ESM loader
+│   ├── data_processor.py                      # Cleans/merges network + GO; builds labels
+│   ├── esm_feature_extractor.py               # Extracts ESM-2 embeddings and re-aligns dataset
+│   └── data_inspection.py                     # Prints shapes/stats of the processed pickle
+├── scripts/
+│   ├── run_pipeline.ps1                       # Run preprocess → ESM extract → inspection
+│   ├── preprocess.ps1                         # Only preprocessing
+│   ├── extract_esm.ps1                        # Only ESM feature extraction
+│   └── inspect.ps1                            # Only dataset inspection
+├── requirements.txt                           # Core deps (install PyTorch separately)
+├── LICENSE                                    # Apache-2.0
+└── README.md
 ```
 
 
