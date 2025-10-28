@@ -1,0 +1,12 @@
+# Core scientific Python
+numpy>=1.23
+pandas>=1.5
+
+# ESM-2 models (provides `esm` module via fair-esm)
+fair-esm>=2.0.0
+
+# NOTE: PyTorch is required but platform-specific.
+# Please install it separately following the official selector:
+#   https://pytorch.org/get-started/locally/
+# Example (CPU only):
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
