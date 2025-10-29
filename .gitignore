@@ -207,4 +207,4 @@ marimo/_lsp/
 __marimo__/
 
 # Proccessed Data Files
-data/processed/
+data/processed_data
